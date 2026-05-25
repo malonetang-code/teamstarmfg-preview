@@ -28,6 +28,7 @@ Current single-page portal structure:
    - Product directory
    - Custom manufacturing
    - Manufacturing capabilities
+   - Customer proof
    - SEO resource hub
 
 3. `#products` - Product directory
@@ -57,13 +58,19 @@ Current single-page portal structure:
    - Factory facts
    - Data points marked as pending confirmation when needed
 
-8. `#resources` - SEO resource placeholders
+8. `#customers` - Customer testimonials and case proof
+   - Approved customer logo wall
+   - Buyer and engineering testimonials
+   - Publishable customer cases
+   - Approval placeholders until real permission is confirmed
+
+9. `#resources` - SEO resource placeholders
    - Material guides
    - Blade type guides
    - Industry applications
    - Cases and FAQs
 
-9. `#contact` - RFQ contact
+10. `#contact` - RFQ contact
    - Contact details
    - Formspree contact form
    - RFQ data checklist
@@ -85,6 +92,8 @@ When the site moves beyond one page, split the following into dedicated URLs:
 - `/industries/woodworking/`
 - `/industries/food-processing/`
 - `/industries/plastic-recycling/`
+- `/customers/`
+- `/case-studies/`
 - `/rfq/custom-industrial-knife-drawing-checklist/`
 
 ## Visual System
@@ -113,6 +122,7 @@ Use visible placeholders only when the information is not confirmed. Do not inve
 - Heat treatment equipment specifications
 - Inspection report samples
 - Customer names or case results
+- Customer logos, quotes, testimonials, or brand relationships without approval
 - Delivery lead times
 - Export percentages or market-share claims
 

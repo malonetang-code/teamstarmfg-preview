@@ -449,7 +449,7 @@
 
     .gateway-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       border-top: 1px solid var(--line);
       border-left: 1px solid var(--line);
       background: #fff;
@@ -774,6 +774,100 @@
       font-size: 13px;
     }
 
+    .trust-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.58fr);
+      gap: 28px;
+      align-items: start;
+    }
+    .logo-wall {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      background: #fff;
+    }
+    .logo-slot {
+      min-height: 132px;
+      padding: 18px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #fff;
+    }
+    .logo-word {
+      color: var(--ink);
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.18;
+    }
+    .logo-meta {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .logo-status {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      min-height: 24px;
+      margin-top: 14px;
+      padding: 0 8px;
+      background: rgba(184,148,79,0.12);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    .testimonial-stack {
+      display: grid;
+      gap: 14px;
+    }
+    .testimonial-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .testimonial-copy {
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.7;
+    }
+    .testimonial-meta {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .case-strip {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      background: #fff;
+    }
+    .case-mini {
+      min-height: 124px;
+      padding: 18px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .case-mini strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .case-mini span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
     .resource-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -910,6 +1004,8 @@
         border-top: 1px solid rgba(255,255,255,0.12);
       }
       .gateway-grid,
+      .logo-wall,
+      .case-strip,
       .resource-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -941,11 +1037,14 @@
       .process-layout,
       .quality-grid,
       .about-layout,
+      .trust-layout,
       .contact-grid {
         grid-template-columns: 1fr;
         gap: 22px;
       }
       .gateway-grid,
+      .logo-wall,
+      .case-strip,
       .resource-grid,
       .quality-points,
       .fact-grid {
@@ -1010,6 +1109,7 @@
         <li><a href="#custom" data-lang="zh">定制制造</a><a href="#custom" data-lang="en">Custom</a></li>
         <li><a href="#capabilities" data-lang="zh">制造能力</a><a href="#capabilities" data-lang="en">Capabilities</a></li>
         <li><a href="#quality" data-lang="zh">质量体系</a><a href="#quality" data-lang="en">Quality</a></li>
+        <li><a href="#customers" data-lang="zh">客户案例</a><a href="#customers" data-lang="en">Customers</a></li>
         <li><a href="#resources" data-lang="zh">技术资料</a><a href="#resources" data-lang="en">Resources</a></li>
         <li><a href="#contact" data-lang="zh">询盘联系</a><a href="#contact" data-lang="en">RFQ</a></li>
       </ul>
@@ -1029,6 +1129,7 @@
       <a href="#capabilities" data-lang="zh">制造能力</a><a href="#capabilities" data-lang="en">Capabilities</a>
       <a href="#quality" data-lang="zh">质量体系</a><a href="#quality" data-lang="en">Quality</a>
       <a href="#company" data-lang="zh">公司与基地</a><a href="#company" data-lang="en">Company</a>
+      <a href="#customers" data-lang="zh">客户案例</a><a href="#customers" data-lang="en">Customers</a>
       <a href="#resources" data-lang="zh">技术资料</a><a href="#resources" data-lang="en">Resources</a>
       <a href="#contact" data-lang="zh">询盘联系</a><a href="#contact" data-lang="en">RFQ Contact</a>
     </div>
@@ -1121,10 +1222,22 @@
             <span class="card-link" data-lang="zh">查看能力</span>
             <span class="card-link" data-lang="en">View capability</span>
           </a>
+          <a class="gateway-card" href="#customers">
+            <div>
+              <div class="index" data-lang="zh">04 / 客户背书</div>
+              <div class="index" data-lang="en">04 / Customer Proof</div>
+              <h3 data-lang="zh">Logo、证言和案例待授权</h3>
+              <h3 data-lang="en">Logos, testimonials and cases pending approval</h3>
+              <p data-lang="zh">先建立可信结构，后续只填入可公开的客户信息。</p>
+              <p data-lang="en">Build the trust structure now, then add only approved customer details.</p>
+            </div>
+            <span class="card-link" data-lang="zh">查看背书</span>
+            <span class="card-link" data-lang="en">View proof</span>
+          </a>
           <a class="gateway-card" href="#resources">
             <div>
-              <div class="index" data-lang="zh">04 / SEO 资料库</div>
-              <div class="index" data-lang="en">04 / SEO Resource Hub</div>
+              <div class="index" data-lang="zh">05 / SEO 资料库</div>
+              <div class="index" data-lang="en">05 / SEO Resource Hub</div>
               <h3 data-lang="zh">预留材料、刀型、行业指南</h3>
               <h3 data-lang="en">Reserved for material, blade and industry guides</h3>
               <p data-lang="zh">先放占位入口，后续按关键词和真实资料逐步扩展。</p>
@@ -1399,7 +1512,105 @@
       </div>
     </section>
 
-    <section class="section alt" id="resources">
+    <section class="section alt" id="customers">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" data-lang="zh">客户证言与合作案例</div>
+            <div class="eyebrow" data-lang="en">Customer Testimonials and Case Proof</div>
+            <h2 data-lang="zh">客户 Logo 可以做，但必须先确认可公开授权。</h2>
+            <h2 data-lang="en">Customer logos belong here, after public approval.</h2>
+          </div>
+          <p class="section-desc" data-lang="zh">这个板块用于承接知名客户 Logo、采购或工程证言、可公开案例与行业背书。未确认授权前不写真实客户名，避免造成商务与品牌使用风险。</p>
+          <p class="section-desc" data-lang="en">This section is reserved for approved client logos, buyer or engineering testimonials, publishable case studies and industry proof. Real customer names are not shown until approval is confirmed.</p>
+        </div>
+        <div class="trust-layout">
+          <div>
+            <div class="logo-wall" aria-label="Approved customer logo placeholders">
+              <div class="logo-slot">
+                <div>
+                  <div class="logo-word" data-lang="zh">客户 Logo 01</div>
+                  <div class="logo-word" data-lang="en">Client Logo 01</div>
+                  <div class="logo-meta" data-lang="zh">行业：服装裁剪设备 / OEM 配套</div>
+                  <div class="logo-meta" data-lang="en">Industry: apparel cutting equipment / OEM supply</div>
+                </div>
+                <span class="logo-status" data-lang="zh">待授权</span><span class="logo-status" data-lang="en">Pending approval</span>
+              </div>
+              <div class="logo-slot">
+                <div>
+                  <div class="logo-word" data-lang="zh">客户 Logo 02</div>
+                  <div class="logo-word" data-lang="en">Client Logo 02</div>
+                  <div class="logo-meta" data-lang="zh">行业：食品加工 / 批量刀片</div>
+                  <div class="logo-meta" data-lang="en">Industry: food processing / batch blades</div>
+                </div>
+                <span class="logo-status" data-lang="zh">待授权</span><span class="logo-status" data-lang="en">Pending approval</span>
+              </div>
+              <div class="logo-slot">
+                <div>
+                  <div class="logo-word" data-lang="zh">客户 Logo 03</div>
+                  <div class="logo-word" data-lang="en">Client Logo 03</div>
+                  <div class="logo-meta" data-lang="zh">行业：木工设备 / 定制刀具</div>
+                  <div class="logo-meta" data-lang="en">Industry: woodworking equipment / custom knives</div>
+                </div>
+                <span class="logo-status" data-lang="zh">待授权</span><span class="logo-status" data-lang="en">Pending approval</span>
+              </div>
+              <div class="logo-slot">
+                <div>
+                  <div class="logo-word" data-lang="zh">客户 Logo 04</div>
+                  <div class="logo-word" data-lang="en">Client Logo 04</div>
+                  <div class="logo-meta" data-lang="zh">行业：塑胶回收 / 粉碎刀片</div>
+                  <div class="logo-meta" data-lang="en">Industry: plastic recycling / crusher blades</div>
+                </div>
+                <span class="logo-status" data-lang="zh">待授权</span><span class="logo-status" data-lang="en">Pending approval</span>
+              </div>
+              <div class="logo-slot">
+                <div>
+                  <div class="logo-word" data-lang="zh">客户 Logo 05</div>
+                  <div class="logo-word" data-lang="en">Client Logo 05</div>
+                  <div class="logo-meta" data-lang="zh">行业：纸品加工 / 分切刀具</div>
+                  <div class="logo-meta" data-lang="en">Industry: paper converting / slitting knives</div>
+                </div>
+                <span class="logo-status" data-lang="zh">待授权</span><span class="logo-status" data-lang="en">Pending approval</span>
+              </div>
+              <div class="logo-slot">
+                <div>
+                  <div class="logo-word" data-lang="zh">客户 Logo 06</div>
+                  <div class="logo-word" data-lang="en">Client Logo 06</div>
+                  <div class="logo-meta" data-lang="zh">行业：通用工业 / 来样复刻</div>
+                  <div class="logo-meta" data-lang="en">Industry: general industry / sample matching</div>
+                </div>
+                <span class="logo-status" data-lang="zh">待授权</span><span class="logo-status" data-lang="en">Pending approval</span>
+              </div>
+            </div>
+            <div class="case-strip">
+              <div class="case-mini"><strong data-lang="zh">可公开案例</strong><strong data-lang="en">Publishable Cases</strong><span data-lang="zh">待补充：客户允许公开的应用、刀型、材料、改进目标。</span><span data-lang="en">Placeholder: approved application, blade type, material and improvement target.</span></div>
+              <div class="case-mini"><strong data-lang="zh">证言原文</strong><strong data-lang="en">Testimonials</strong><span data-lang="zh">待补充：客户职位、行业、国家或地区，以及可引用文字。</span><span data-lang="en">Placeholder: role, industry, country or region, and approved quote.</span></div>
+              <div class="case-mini"><strong data-lang="zh">授权记录</strong><strong data-lang="en">Approval Record</strong><span data-lang="zh">待补充：Logo 文件、使用范围、授权日期和联系人。</span><span data-lang="en">Placeholder: logo file, usage scope, approval date and contact owner.</span></div>
+            </div>
+          </div>
+          <aside class="testimonial-stack">
+            <article class="testimonial-card">
+              <div class="index" data-lang="zh">证言占位 / 采购视角</div>
+              <div class="index" data-lang="en">Testimonial Placeholder / Buyer View</div>
+              <p class="testimonial-copy" data-lang="zh">“这里放客户确认可公开的原话，例如交付稳定性、沟通效率、样品复刻准确度或批量一致性。”</p>
+              <p class="testimonial-copy" data-lang="en">“Approved customer quote goes here, such as delivery stability, communication, sample matching accuracy or batch consistency.”</p>
+              <div class="testimonial-meta" data-lang="zh">客户姓名 / 职位 / 公司 Logo：待客户授权</div>
+              <div class="testimonial-meta" data-lang="en">Name / role / company logo: pending customer approval</div>
+            </article>
+            <article class="testimonial-card">
+              <div class="index" data-lang="zh">案例占位 / 工程视角</div>
+              <div class="index" data-lang="en">Case Placeholder / Engineering View</div>
+              <p class="testimonial-copy" data-lang="zh">“这里放可量化但已脱敏的案例，例如材料替换、寿命优化、停机减少或进口件替代。”</p>
+              <p class="testimonial-copy" data-lang="en">“A publishable, anonymized case goes here, such as material replacement, life optimization, downtime reduction or import replacement.”</p>
+              <div class="testimonial-meta" data-lang="zh">行业 / 刀型 / 公开参数：待确认</div>
+              <div class="testimonial-meta" data-lang="en">Industry / blade type / publishable parameters: pending confirmation</div>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resources">
       <div class="wrap">
         <div class="section-head">
           <div>
@@ -1514,6 +1725,7 @@
       <div class="footer-links">
         <a href="#products" data-lang="zh">产品目录</a><a href="#products" data-lang="en">Products</a>
         <a href="#capabilities" data-lang="zh">制造能力</a><a href="#capabilities" data-lang="en">Capabilities</a>
+        <a href="#customers" data-lang="zh">客户案例</a><a href="#customers" data-lang="en">Customers</a>
         <a href="#resources" data-lang="zh">技术资料</a><a href="#resources" data-lang="en">Resources</a>
         <a href="#contact" data-lang="zh">询盘联系</a><a href="#contact" data-lang="en">RFQ</a>
       </div>
