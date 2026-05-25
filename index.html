@@ -449,7 +449,7 @@
 
     .gateway-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       border-top: 1px solid var(--line);
       border-left: 1px solid var(--line);
       background: #fff;
@@ -474,8 +474,7 @@
     }
     .gateway-card h3,
     .product-card h3,
-    .cap-card h3,
-    .resource-card h3 {
+    .cap-card h3 {
       margin-top: 14px;
       color: var(--ink);
       font-size: 21px;
@@ -483,8 +482,7 @@
     }
     .gateway-card p,
     .product-card p,
-    .cap-card p,
-    .resource-card p {
+    .cap-card p {
       margin-top: 10px;
       color: var(--muted);
       font-size: 14px;
@@ -868,19 +866,6 @@
       line-height: 1.6;
     }
 
-    .resource-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-      background: #fff;
-    }
-    .resource-card {
-      min-height: 238px;
-      padding: 24px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
     .placeholder-badge {
       display: inline-flex;
       min-height: 25px;
@@ -1005,8 +990,7 @@
       }
       .gateway-grid,
       .logo-wall,
-      .case-strip,
-      .resource-grid {
+      .case-strip {
         grid-template-columns: repeat(2, 1fr);
       }
       .product-card, .product-card.wide { grid-column: span 6; }
@@ -1045,7 +1029,6 @@
       .gateway-grid,
       .logo-wall,
       .case-strip,
-      .resource-grid,
       .quality-points,
       .fact-grid {
         grid-template-columns: 1fr;
@@ -1110,7 +1093,6 @@
         <li><a href="#capabilities" data-lang="zh">制造能力</a><a href="#capabilities" data-lang="en">Capabilities</a></li>
         <li><a href="#quality" data-lang="zh">质量体系</a><a href="#quality" data-lang="en">Quality</a></li>
         <li><a href="#customers" data-lang="zh">客户案例</a><a href="#customers" data-lang="en">Customers</a></li>
-        <li><a href="#resources" data-lang="zh">技术资料</a><a href="#resources" data-lang="en">Resources</a></li>
         <li><a href="#contact" data-lang="zh">询盘联系</a><a href="#contact" data-lang="en">RFQ</a></li>
       </ul>
       <div class="nav-actions">
@@ -1130,7 +1112,6 @@
       <a href="#quality" data-lang="zh">质量体系</a><a href="#quality" data-lang="en">Quality</a>
       <a href="#company" data-lang="zh">公司与基地</a><a href="#company" data-lang="en">Company</a>
       <a href="#customers" data-lang="zh">客户案例</a><a href="#customers" data-lang="en">Customers</a>
-      <a href="#resources" data-lang="zh">技术资料</a><a href="#resources" data-lang="en">Resources</a>
       <a href="#contact" data-lang="zh">询盘联系</a><a href="#contact" data-lang="en">RFQ Contact</a>
     </div>
   </header>
@@ -1179,11 +1160,11 @@
           <div>
             <div class="eyebrow" data-lang="zh">网站长期结构</div>
             <div class="eyebrow" data-lang="en">Long-term Site Structure</div>
-            <h2 data-lang="zh">先服务采购和工程，再服务 SEO。</h2>
-            <h2 data-lang="en">Built for buyers and engineers first, then SEO.</h2>
+            <h2 data-lang="zh">先把采购和工程路径讲清楚。</h2>
+            <h2 data-lang="en">Built around buyer and engineering decisions.</h2>
           </div>
-          <p class="section-desc" data-lang="zh">这个首页是未来官网的门户层：产品目录、定制流程、制造能力、质量体系、公司基地、技术资料、询盘入口都能继续扩展为独立 SEO 页面。</p>
-          <p class="section-desc" data-lang="en">This homepage acts as the portal layer for future SEO pages: product directory, custom process, manufacturing capability, quality system, company bases, technical resources and RFQ contact.</p>
+          <p class="section-desc" data-lang="zh">这个首页是未来官网的门户层：产品目录、定制流程、制造能力、质量体系、公司基地、客户背书和询盘入口构成主要转化路径。</p>
+          <p class="section-desc" data-lang="en">This homepage acts as the portal layer: product directory, custom process, manufacturing capability, quality system, company bases, customer proof and RFQ contact form the main conversion path.</p>
         </div>
         <div class="gateway-grid">
           <a class="gateway-card" href="#products">
@@ -1234,18 +1215,6 @@
             <span class="card-link" data-lang="zh">查看背书</span>
             <span class="card-link" data-lang="en">View proof</span>
           </a>
-          <a class="gateway-card" href="#resources">
-            <div>
-              <div class="index" data-lang="zh">05 / SEO 资料库</div>
-              <div class="index" data-lang="en">05 / SEO Resource Hub</div>
-              <h3 data-lang="zh">预留材料、刀型、行业指南</h3>
-              <h3 data-lang="en">Reserved for material, blade and industry guides</h3>
-              <p data-lang="zh">先放占位入口，后续按关键词和真实资料逐步扩展。</p>
-              <p data-lang="en">Reserved entries now, expandable later with keyword research and real data.</p>
-            </div>
-            <span class="card-link" data-lang="zh">查看占位</span>
-            <span class="card-link" data-lang="en">View placeholders</span>
-          </a>
         </div>
       </div>
     </section>
@@ -1256,8 +1225,8 @@
           <div>
             <div class="eyebrow" data-lang="zh">产品目录</div>
             <div class="eyebrow" data-lang="en">Product Directory</div>
-            <h2 data-lang="zh">用目录逻辑承接未来产品 SEO。</h2>
-            <h2 data-lang="en">A directory structure ready for product SEO.</h2>
+            <h2 data-lang="zh">用目录逻辑承接未来产品详情页。</h2>
+            <h2 data-lang="en">A directory structure ready for product detail pages.</h2>
           </div>
           <p class="section-desc" data-lang="zh">当前先以应用行业组织产品，后续可拆分为“木工刀具、食品刀具、粉碎机刀片、分切刀、异型刀”等独立页面。</p>
           <p class="section-desc" data-lang="en">Products are organized by application now. Later this can expand into dedicated pages for woodworking knives, food blades, crusher blades, slitting knives, custom-shaped knives and more.</p>
@@ -1610,47 +1579,6 @@
       </div>
     </section>
 
-    <section class="section" id="resources">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow" data-lang="zh">SEO 技术资料库</div>
-            <div class="eyebrow" data-lang="en">SEO Resource Hub</div>
-            <h2 data-lang="zh">先留入口，后续按关键词和真实资料填充。</h2>
-            <h2 data-lang="en">Reserve the structure now, fill it with real content later.</h2>
-          </div>
-          <p class="section-desc" data-lang="zh">未来 SEO 不应只靠首页堆关键词，而是逐步建设“产品页、材料页、应用页、工艺页、案例页”。这里先放清晰占位，后续可变成独立 URL。</p>
-          <p class="section-desc" data-lang="en">Future SEO should not rely on keyword stuffing on the homepage. It should grow through product, material, application, process and case pages. These placeholders can become dedicated URLs later.</p>
-        </div>
-        <div class="resource-grid">
-          <article class="resource-card">
-            <div class="index" data-lang="zh">材料指南</div><div class="index" data-lang="en">Material Guides</div>
-            <h3 data-lang="zh">高速钢、工具钢、钨钢、不锈钢</h3><h3 data-lang="en">HSS, tool steel, carbide and stainless steel</h3>
-            <p data-lang="zh">待补充：各材料适用行业、硬度范围、耐磨性与成本比较。</p><p data-lang="en">Placeholder: industry fit, hardness range, wear resistance and cost comparison.</p>
-            <span class="placeholder-badge" data-lang="zh">待补充内容</span><span class="placeholder-badge" data-lang="en">Content placeholder</span>
-          </article>
-          <article class="resource-card">
-            <div class="index" data-lang="zh">刀型指南</div><div class="index" data-lang="en">Blade Type Guides</div>
-            <h3 data-lang="zh">直刀、圆刀、分切刀、粉碎刀、异型刀</h3><h3 data-lang="en">Straight, circular, slitting, crusher and custom blades</h3>
-            <p data-lang="zh">待补充：不同刀型的图纸要点、常见失效原因和询盘资料。</p><p data-lang="en">Placeholder: drawing notes, common failure causes and RFQ details by blade type.</p>
-            <span class="placeholder-badge" data-lang="zh">待补充内容</span><span class="placeholder-badge" data-lang="en">Content placeholder</span>
-          </article>
-          <article class="resource-card">
-            <div class="index" data-lang="zh">行业应用</div><div class="index" data-lang="en">Industry Applications</div>
-            <h3 data-lang="zh">木工、食品、塑胶、纸品、纺织</h3><h3 data-lang="en">Woodworking, food, plastic, paper and textile</h3>
-            <p data-lang="zh">待补充：各行业设备、被切材料、寿命目标和产品案例。</p><p data-lang="en">Placeholder: equipment, material cut, life target and product cases by industry.</p>
-            <span class="placeholder-badge" data-lang="zh">待补充内容</span><span class="placeholder-badge" data-lang="en">Content placeholder</span>
-          </article>
-          <article class="resource-card">
-            <div class="index" data-lang="zh">案例与问答</div><div class="index" data-lang="en">Cases and FAQs</div>
-            <h3 data-lang="zh">替换进口刀、样品复刻、寿命优化</h3><h3 data-lang="en">Import replacement, sample matching and life optimization</h3>
-            <p data-lang="zh">待补充：真实客户案例、可公开参数、常见问题和交付周期。</p><p data-lang="en">Placeholder: real cases, publishable parameters, FAQs and delivery lead time.</p>
-            <span class="placeholder-badge" data-lang="zh">待补充内容</span><span class="placeholder-badge" data-lang="en">Content placeholder</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="contact">
       <div class="wrap">
         <div class="section-head">
@@ -1726,7 +1654,6 @@
         <a href="#products" data-lang="zh">产品目录</a><a href="#products" data-lang="en">Products</a>
         <a href="#capabilities" data-lang="zh">制造能力</a><a href="#capabilities" data-lang="en">Capabilities</a>
         <a href="#customers" data-lang="zh">客户案例</a><a href="#customers" data-lang="en">Customers</a>
-        <a href="#resources" data-lang="zh">技术资料</a><a href="#resources" data-lang="en">Resources</a>
         <a href="#contact" data-lang="zh">询盘联系</a><a href="#contact" data-lang="en">RFQ</a>
       </div>
     </div>

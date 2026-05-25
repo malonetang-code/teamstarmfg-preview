@@ -29,7 +29,6 @@ Current single-page portal structure:
    - Custom manufacturing
    - Manufacturing capabilities
    - Customer proof
-   - SEO resource hub
 
 3. `#products` - Product directory
    - Application-based categories now
@@ -64,13 +63,7 @@ Current single-page portal structure:
    - Publishable customer cases
    - Approval placeholders until real permission is confirmed
 
-9. `#resources` - SEO resource placeholders
-   - Material guides
-   - Blade type guides
-   - Industry applications
-   - Cases and FAQs
-
-10. `#contact` - RFQ contact
+9. `#contact` - RFQ contact
    - Contact details
    - Formspree contact form
    - RFQ data checklist
@@ -132,5 +125,6 @@ Current placeholders in `index.html` are intentional and should be replaced only
 
 - The current static page uses `data-lang="zh"` and `data-lang="en"` on one URL.
 - For stronger multilingual SEO later, use separate URLs such as `/` and `/en/`, then add `hreflang` annotations and language-specific canonical URLs.
+- The visible homepage no longer keeps a standalone SEO resource hub. Future search content should become real product, industry, capability, customer case, or RFQ guide pages instead of a generic resource section.
 - Keep visible copy concrete and keyword-relevant, but do not keyword-stuff.
 - Structured data currently covers Organization, WebSite, and ItemList. Add Product, FAQ, and Breadcrumb schema only after real detail pages exist.
